@@ -1,0 +1,38 @@
+# Configuration du résumé quotidien.
+# Ajoute, retire ou déplace des flux RSS comme tu veux.
+
+# Articles publiés dans les X dernières heures
+fenetre_heures = 24
+
+# Nombre max d'articles affichés par catégorie
+max_par_categorie = 8
+
+# Les articles dont le titre ou le lien contient un de ces mots sont ignorés
+exclure = ["bons-plans", "bon plan", "promo", "soldes", "code promo", "black friday"]
+
+[[categorie]]
+nom = "📱 Actu tech"
+couleur = "#5865F2"
+flux = [
+  "https://www.numerama.com/feed/",
+  "https://next.ink/feed/",
+  "https://www.frandroid.com/feed",
+  "https://korben.info/feed",
+]
+
+[[categorie]]
+nom = "🤖 Intelligence artificielle"
+couleur = "#EB459E"
+flux = [
+  "https://www.actuia.com/feed/",
+  "https://www.01net.com/actualites/technos/intelligence-artificielle/feed/",
+  "https://www.lesnumeriques.com/intelligence-artificielle/rss.xml",
+  "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+]
+
+[[categorie]]
+nom = "🔥 Hacker News (top)"
+couleur = "#F26522"
+flux = [
+  "https://hnrss.org/frontpage?points=250",
+]
