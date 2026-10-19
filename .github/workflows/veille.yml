@@ -1,0 +1,20 @@
+name: Veille quotidienne
+
+on:
+  schedule:
+    # Tous les jours à 6h UTC (= 7h en hiver, 8h en été, heure de Paris)
+    - cron: "0 6 * * *"
+  workflow_dispatch: # permet de lancer à la main depuis l'onglet Actions
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python veille.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
