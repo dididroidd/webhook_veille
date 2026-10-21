@@ -3,7 +3,7 @@ name: Veille quotidienne
 on:
   schedule:
     # Tous les jours à 6h UTC (= 7h en hiver, 8h en été, heure de Paris)
-    - cron: "0 6 * * *"
+    - cron: "0 22 * * *"
   workflow_dispatch: # permet de lancer à la main depuis l'onglet Actions
 
 jobs:
